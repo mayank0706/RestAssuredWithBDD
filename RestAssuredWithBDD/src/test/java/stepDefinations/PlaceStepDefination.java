@@ -10,6 +10,7 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import junit.framework.Assert;
 import pojoClasses.AddPlaceResponse;
+import supportingClasses.APIResources;
 import supportingClasses.GeneralUtils;
 import supportingClasses.GlobalConstants;
 import supportingClasses.PayloadCreation;
@@ -24,24 +25,25 @@ public class PlaceStepDefination {
 	ResponseSpecification responseSpec;
 	Response response;
 
-	@Given("add place api payload")
-	public void add_place_api_payload() throws Exception {
+	@Given("add place api payload with {string} {string} {string} {string}")
+	public void add_place_api_payload(String name, String address, String website, String language) throws Exception {
 		try {
 			System.out.println("Given Step");
-			requestSpec = given().log().all().spec(GeneralUtils.add_place_request_specification())
-					.body(PayloadCreation.generate_add_place_payload());
+			requestSpec = given().spec(GeneralUtils.add_place_request_specification())
+					.body(PayloadCreation.generate_add_place_payload(name, address, website, language));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	@When("user sends the post request")
-	public void user_sends_the_post_request() throws Exception {
+	@When("user sends {string} with the {string} request")
+	public void user_sends_the_post_request(String resource, String httpMethod) throws Exception {
 		try {
 			System.out.println("When Step");
-			responseSpec = new ResponseSpecBuilder().expectStatusCode(200)
+			APIResources api = APIResources.valueOf(resource);
+			responseSpec = new ResponseSpecBuilder()
 					.expectHeader("Server", "Apache/2.4.52 (Ubuntu)").build();
-			response = requestSpec.when().post(GlobalConstants.postResource).then().log().all().spec(responseSpec)
+			response = requestSpec.when().post(api.getResource()).then().spec(responseSpec)
 					.extract().response();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -66,9 +68,9 @@ public class PlaceStepDefination {
 	public void in_response_body_is(String key, String value) throws Exception {
 		try {
 			System.out.println("Second then step");
-			String resp = response.asString();
-			JsonPath js = new JsonPath(resp);
-			Assert.assertEquals(value, js.get(key));
+			AddPlaceResponse ap = response.as(AddPlaceResponse.class);
+			String statusValue = ap.getStatus();
+			Assert.assertEquals(value, statusValue);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

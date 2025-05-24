@@ -5,7 +5,7 @@ public class LocationAttributes {
 	private double lat;
 	private double lng;
 	
-	private double getLat() {
+	public double getLat() {
 		return lat;
 	}
 	

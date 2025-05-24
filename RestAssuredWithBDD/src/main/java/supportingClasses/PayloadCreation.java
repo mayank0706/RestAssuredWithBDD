@@ -8,16 +8,16 @@ import pojoClasses.LocationAttributes;
 
 public class PayloadCreation {
 	
-	public static AddPlace generate_add_place_payload() throws Exception{
+	public static AddPlace generate_add_place_payload(String name, String address, String website, String language) throws Exception{
 		AddPlace ap = new AddPlace();
 		try {
 			// Serialization
 			ap.setAccuracy(50);
-			ap.setName("Masion Retreat");
-			ap.setPhoneNum("(+91) 9654112834");
-			ap.setAddress("22 Church Street, NY");
-			ap.setWebsite("https://www.google.com");
-			ap.setLanguage("Espanol es_ES");
+			ap.setName(name);
+			ap.setPhoneNum("(+91) 9654228311");
+			ap.setAddress(address);
+			ap.setWebsite(website);
+			ap.setLanguage(language);
 			List<String> types = new ArrayList<String>();
 			types.add("App Store");
 			types.add("Court");

@@ -19,8 +19,13 @@
 
 Feature: Validating the Place API
 
-  Scenario: Validating the Add Place API
-    Given add place api payload
-    When user sends the post request
+  Scenario Outline: Validating the Add Place API
+    Given add place api payload with "<name>" "<address>" "<website>" "<language>"
+    When user sends "AddPlaceResource" with the "post" request
     Then status code is 200
     And "status" in response body is "OK"
+    
+    Examples:
+    | name          |  address          | website       | language     |
+    |Regenta Suites |Church Street NY   |www.google.com |Espanol es_ES |
+    |Masion Retreat |Broadway Street NC |www.google.com |French fr_FR  |

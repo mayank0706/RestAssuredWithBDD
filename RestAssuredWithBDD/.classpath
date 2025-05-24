@@ -36,7 +36,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/mayank.maurya/.m2/repository/io/rest-assured/rest-assured/5.5.1/rest-assured-5.5.1.jar" sourcepath="C:/Users/mayank.maurya/.m2/repository/io/rest-assured/rest-assured/5.5.1/rest-assured-5.5.1-sources.jar">
+	<classpathentry kind="lib" path="C:/Users/user/.m2/repository/io/rest-assured/rest-assured/5.5.1/rest-assured-5.5.1.jar" sourcepath="C:/Users/user/.m2/repository/io/rest-assured/rest-assured/5.5.1/rest-assured-5.5.1-sources.jar">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
@@ -46,7 +46,7 @@
 			<attribute name="maven.scope" value="test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/mayank.maurya/.m2/repository/io/rest-assured/rest-assured/5.5.0/rest-assured-5.5.0.jar" sourcepath="C:/Users/mayank.maurya/.m2/repository/io/rest-assured/rest-assured/5.5.0/rest-assured-5.5.0-sources.jar">
+	<classpathentry kind="lib" path="C:/Users/user/.m2/repository/io/rest-assured/rest-assured/5.5.0/rest-assured-5.5.0.jar" sourcepath="C:/Users/user/.m2/repository/io/rest-assured/rest-assured/5.5.0/rest-assured-5.5.0-sources.jar">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="maven.groupId" value="io.rest-assured"/>

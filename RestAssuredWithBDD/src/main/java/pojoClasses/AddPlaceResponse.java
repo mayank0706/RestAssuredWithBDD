@@ -6,6 +6,7 @@ public class AddPlaceResponse {
 	private String scope;
 	private String reference;
 	private String id;
+	private String place_id;
 	
 	public String getStatus() {
 		return status;
@@ -37,6 +38,14 @@ public class AddPlaceResponse {
 	
 	public void setId(String id) {
 		this.id = id;
+	}
+	
+	public String getPlace_id() {
+		return place_id;
+	}
+	
+	public void setPlace_id(String place_id) {
+		this.place_id = place_id;
 	}
 
 }
