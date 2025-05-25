@@ -28,7 +28,7 @@ Body:
     "phoneNum": "(+91) 9654228311"
 }
 HTTP/1.1 200 OK
-Date: Sat, 24 May 2025 18:29:02 GMT
+Date: Sun, 25 May 2025 17:46:08 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -41,10 +41,48 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "70671a45d9e00973abf2d1c297d2b388",
+    "place_id": "2f140139db457a6f22ff054dd04a970d",
     "scope": "APP",
-    "reference": "d01e91a28703e4d4356ad1684dc68486d01e91a28703e4d4356ad1684dc68486",
-    "id": "d01e91a28703e4d4356ad1684dc68486"
+    "reference": "af1670ae33fdb569717c502d30140db0af1670ae33fdb569717c502d30140db0",
+    "id": "af1670ae33fdb569717c502d30140db0"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=2f140139db457a6f22ff054dd04a970d
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=2f140139db457a6f22ff054dd04a970d
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sun, 25 May 2025 17:46:09 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 237
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-40.234576",
+        "longitude": "33.427632"
+    },
+    "accuracy": "50",
+    "name": "Regenta Suites",
+    "phone_number": "",
+    "address": "Church Street NY",
+    "types": "App Store,Court,Mansion",
+    "website": "www.google.com",
+    "language": "Espanol es_ES"
 }
 Request method:	POST
 Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
@@ -76,7 +114,7 @@ Body:
     "phoneNum": "(+91) 9654228311"
 }
 HTTP/1.1 200 OK
-Date: Sat, 24 May 2025 18:29:02 GMT
+Date: Sun, 25 May 2025 17:46:10 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -89,8 +127,76 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "9b3ae2141f3d970e850e5092342e39d8",
+    "place_id": "d29f8d10bd19737aecd12c658877e00f",
     "scope": "APP",
-    "reference": "4ea32922ddc96a736cce0c41ca7681e74ea32922ddc96a736cce0c41ca7681e7",
-    "id": "4ea32922ddc96a736cce0c41ca7681e7"
+    "reference": "e83610e1051ffd9e6d8294d46dcbed29e83610e1051ffd9e6d8294d46dcbed29",
+    "id": "e83610e1051ffd9e6d8294d46dcbed29"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=d29f8d10bd19737aecd12c658877e00f
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=d29f8d10bd19737aecd12c658877e00f
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sun, 25 May 2025 17:46:10 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 238
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-40.234576",
+        "longitude": "33.427632"
+    },
+    "accuracy": "50",
+    "name": "Masion Retreat",
+    "phone_number": "",
+    "address": "Broadway Street NC",
+    "types": "App Store,Court,Mansion",
+    "website": "www.google.com",
+    "language": "French fr_FR"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "place_id": "d29f8d10bd19737aecd12c658877e00f"
+}
+HTTP/1.1 200 OK
+Date: Sun, 25 May 2025 17:46:12 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 15
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK"
 }

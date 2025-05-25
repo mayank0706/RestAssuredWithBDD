@@ -13,19 +13,27 @@
 #| (Data Tables)
 #@ (Tags/Labels):To group Scenarios
 #<> (placeholder)
-#""
+#"" 
 ## (Comments)
 #Sample Feature Definition Template
 
 Feature: Validating the Place API
-
+	
+	@AddPlace
   Scenario Outline: Validating the Add Place API
     Given add place api payload with "<name>" "<address>" "<website>" "<language>"
     When user sends "AddPlaceResource" with the "post" request
     Then status code is 200
     And "status" in response body is "OK"
+    And verify place_id maps to the "<name>" using "GetPlaceResource" with the "get" request
     
     Examples:
     | name          |  address          | website       | language     |
     |Regenta Suites |Church Street NY   |www.google.com |Espanol es_ES |
     |Masion Retreat |Broadway Street NC |www.google.com |French fr_FR  |
+    
+  @DeletePlace
+  Scenario: Validating the Delete Place API
+  Given delete place api payload
+  When user sends "DeletePlaceResource" with the "post" request
+  Then status code is 200

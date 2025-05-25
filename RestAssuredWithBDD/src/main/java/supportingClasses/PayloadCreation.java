@@ -33,5 +33,11 @@ public class PayloadCreation {
 		}
 		return ap;
 	}
+	
+	public static String generate_delete_place_payload(String place_id) {
+		return "{\n"
+				+ "    \"place_id\": \""+place_id+"\"\n"
+				+ "}";
+	}
 
 }
